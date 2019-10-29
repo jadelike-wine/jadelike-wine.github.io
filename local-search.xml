@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>vs-code编译java中ClassNotFoundException问题</title>
+    <link href="undefined2019/10/29/vs-code%E7%BC%96%E8%AF%91java%E4%B8%ADClassNotFoundException%E9%97%AE%E9%A2%98/"/>
+    <url>2019/10/29/vs-code%E7%BC%96%E8%AF%91java%E4%B8%ADClassNotFoundException%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<div style="text-indent:2em"><p></font><br/><br><img src="https://user-images.githubusercontent.com/46087189/67135696-e2536d80-f24e-11e9-8bca-3c504754d1bc.png" alt="问题">      </p><p>编译java的时候，明明cmd中可以运行，但是vscode就是不行，环境也很正常，查遍了google还是找不到原因，干脆去github上问开发者了。        </p><p>首先，将以下插件更新到最新版本：<br><img src="https://user-images.githubusercontent.com/46087189/67180634-bbdb3100-f40c-11e9-97ce-2b49b0220f41.png" alt="">      </p><p>再F1 -&gt; Java: clean the Java language server workspace就可以了     </p><p>动态图：<br><img src="https://user-images.githubusercontent.com/14052197/67253864-8ede5b00-f4ac-11e9-9828-6a84cf6b8a7e.gif" alt=""> </p><p>开发者回复的链接：<a href="https://github.com/microsoft/vscode-java-debug/issues/692" target="_blank" rel="noopener">https://github.com/microsoft/vscode-java-debug/issues/692</a></p></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>解决mingw-w64下载太慢问题</title>
+    <link href="undefined2019/10/29/%E8%A7%A3%E5%86%B3mingw-w64%E4%B8%8B%E8%BD%BD%E5%A4%AA%E6%85%A2%E9%97%AE%E9%A2%98/"/>
+    <url>2019/10/29/%E8%A7%A3%E5%86%B3mingw-w64%E4%B8%8B%E8%BD%BD%E5%A4%AA%E6%85%A2%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<div style="text-indent:2em"><p></font><br/>    </p><p>配置vs code的c/c++环境的时候，发现官网那个安装包实在是慢的不行，于是等它下载完后我直接压缩了一下上传到了onedrive，方便以后其他电脑配置环境。下载地址：<a href="https://jxjjxy-my.sharepoint.com/:u:/g/personal/lyp9990_t_odmail_cn/EWziHzjX1lhEjfSq0GXrorsByIEse7gKy0qvN6HjwhNvIw?e=YB3eZo" target="_blank" rel="noopener">https://jxjjxy-my.sharepoint.com/:u:/g/personal/lyp9990_t_odmail_cn/EWziHzjX1lhEjfSq0GXrorsByIEse7gKy0qvN6HjwhNvIw?e=YB3eZo</a><br><img src="https://raw.githubusercontent.com/jadelike-wine/picgo/master/img/20191029142954.png" alt="">   </p><p>解压到c盘如下目录就可以</p></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>米诺陶(minotaur)点评</title>
     <link href="undefined2019/10/29/%E7%B1%B3%E8%AF%BA%E9%99%B6(minotaur)%E7%82%B9%E8%AF%84/"/>
     <url>2019/10/29/%E7%B1%B3%E8%AF%BA%E9%99%B6(minotaur)%E7%82%B9%E8%AF%84/</url>
