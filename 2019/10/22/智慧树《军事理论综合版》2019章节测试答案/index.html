@@ -180,25 +180,42 @@
     
       <br><br>
       
-      <div class="disqus" style="width:100%">
-  <div id="disqus_thread"></div>
+      
+  <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+  
+    <script>
+      document.getElementById('visitors-text').innerText = '本文阅读数：';
+      document.getElementById('visitors-count').className = 'leancloud-visitors-count';
+    </script>
+  
+
   <script>
-    var disqus_shortname = '';
-    var disqus_config = function () {
-      this.page.url = 'http://yoursite.com/2019/10/22/智慧树《军事理论综合版》2019章节测试答案/';
-      this.page.identifier = '/2019/10/22/智慧树《军事理论综合版》2019章节测试答案/';
+    var notify = 'false' == true ? true : false;
+    var verify = 'false' == true ? true : false;
+    var oldLoad = window.onload;
+    window.onload = function () {
+      new Valine({
+        el: '#vcomments',
+        notify: notify,
+        verify: verify,
+        app_id: "cGYqOXiV5nwmphBKmj2FxoqO-gzGzoHsz# your leancloud application appid",
+        app_key: "NuHFggAHfW3OY5bUhcE2uKSt",
+        placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
+        avatar: "retro",
+        meta: ['nick', 'mail', 'link'],
+        pageSize: "10",
+        visitor: "true"
+      });
+      oldLoad && oldLoad();
     };
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Disqus.</a></noscript>
-</div>
+  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
     
   </div>
 </div>
