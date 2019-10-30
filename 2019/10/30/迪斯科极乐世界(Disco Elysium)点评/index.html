@@ -184,42 +184,30 @@ Disco Elysium是一种侦探类别的RPG游戏，游戏的开头比较老套，�
     
       <br><br>
       
-      
-  <div id="vcomments" style="width: 90%; margin: 0 auto;"></div>
+      <!-- valine -->
+  {{- if .Site.Params.valine.enable -}}
+  <!-- id 将作为查询条件 -->
+  <span id="{{ .URL | relURL }}" class="leancloud_visitors" data-flag-title="{{ .Title }}">
+    <span class="post-meta-item-text">文章阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-  
-    <script>
-      document.getElementById('visitors-text').innerText = '本文阅读数：';
-      document.getElementById('visitors-count').className = 'leancloud-visitors-count';
-    </script>
-  
-
-  <script>
-    var notify = 'false' == true ? true : false;
-    var verify = 'false' == true ? true : false;
-    var oldLoad = window.onload;
-    window.onload = function () {
-      new Valine({
-        el: '#vcomments',
-        notify: notify,
-        verify: verify,
-        app_id: "cGYqOXiV5nwmphBKmj2FxoqO-gzGzoHsz# your leancloud application appid",
-        app_key: "NuHFggAHfW3OY5bUhcE2uKSt",
-        placeholder: "ヾﾉ≧∀≦)o来啊，快活啊!",
-        avatar: "retro",
-        meta: ['nick', 'mail', 'link'],
-        pageSize: "10",
-        visitor: "true"
-      });
-      oldLoad && oldLoad();
-    };
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '{{ .Site.Params.valine.appId }}',
+        appKey: '{{ .Site.Params.valine.appKey }}',
+        notify: {{ .Site.Params.valine.notify }}, 
+        verify: {{ .Site.Params.valine.verify }}, 
+        avatar:'{{ .Site.Params.valine.avatar }}', 
+        placeholder: '{{ .Site.Params.valine.placeholder }}',
+        visitor: {{ .Site.Params.valine.visitor }}
+    });
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://valine.js.org" target="_blank" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
+  {{- end }}
     
   </div>
 </div>
