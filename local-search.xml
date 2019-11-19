@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>git上传项目到远程仓库</title>
+    <link href="undefined2019/11/19/gitee/"/>
+    <url>2019/11/19/gitee/</url>
+    
+    <content type="html"><![CDATA[<div style="text-indent:2em"><p></font><br/>    </p><h3 id="1-命令行上传"><a href="#1-命令行上传" class="headerlink" title="1.命令行上传"></a><strong>1.命令行上传</strong></h3><p>请按照自己进行到的步骤，结合自己的实际情况来选则继续下面的步骤。假设我的环境中没有.git,且我的远程仓库<a href="https://gitee.com/xxx.git已创建好。" target="_blank" rel="noopener">https://gitee.com/xxx.git已创建好。</a></p><h5 id="1-初始化一个空的git本地仓库"><a href="#1-初始化一个空的git本地仓库" class="headerlink" title="1. 初始化一个空的git本地仓库"></a><strong>1. 初始化一个空的git本地仓库</strong></h5><p>git init</p><h5 id="2-声明你的身份"><a href="#2-声明你的身份" class="headerlink" title="2. 声明你的身份"></a><strong>2. 声明你的身份</strong></h5><p>git config –global user.name &quot;fantj&quot;</p><p>git config –global user.email &quot;<a href="mailto:8440xxx@qq.com" target="_blank" rel="noopener">8440xxx@qq.com</a>&quot;</p><h5 id="3-声明你的远程仓库路径"><a href="#3-声明你的远程仓库路径" class="headerlink" title="3. 声明你的远程仓库路径"></a><strong>3. 声明你的远程仓库路径</strong></h5><p>git remote add origin <a href="https://gitee.com/xxx/xxx.git" target="_blank" rel="noopener">https://gitee.com/xxx/xxx.git</a> (你的远程项目地址)</p><h5 id="查看远程仓库地址"><a href="#查看远程仓库地址" class="headerlink" title="查看远程仓库地址"></a><strong>查看远程仓库地址</strong></h5><p>git remote -v 应该要显示出你的远程仓库地址，如果不是对应的地址。先删除后添加。如果是正确的则跳过下面的代码。</p><p>如果结果是正确的则跳过下面的代码。</p><p>git remote rm origin</p><p>git remote add origin xxxxx.git</p><h5 id="查看全局配置信息"><a href="#查看全局配置信息" class="headerlink" title="查看全局配置信息"></a><strong>查看全局配置信息</strong></h5><pre><code>git config --global --list</code></pre><p>E:\workspace\go-xxx&amp;gt;git config –global –list</p><p>user.email=84407xxx@qq.com</p><p>user.name=fantj</p><h5 id="4-检测是否成功连接上远程仓库"><a href="#4-检测是否成功连接上远程仓库" class="headerlink" title="4. 检测是否成功连接上远程仓库"></a><strong>4. 检测是否成功连接上远程仓库</strong></h5><pre><code>执行    git fetch</code></pre><p>E:\workspace\go-xxx&amp;gt;git fetch</p><p>remote: Enumerating objects: 3, done.</p><p>remote: Counting objects: 100% (3/3), done.</p><p>remote: Compressing objects: 100% (2/2), done.</p><p>remote: Total 3 (delta 0), reused 0 (delta 0)</p><p>Unpacking objects: 100% (3/3), done.</p><p>From <a href="https://gitee.com/xxxx/go-xxxx" target="_blank" rel="noopener">https://gitee.com/xxxx/go-xxxx</a></p><p> * [new branch]      master     -&amp;gt; origin/master</p><p><strong>注意</strong> ： 如果出现上述，证明成功连接到远程仓库了，没有出现也没关系，证明你本地没有你的gitee账户信息，随便打个命令git clone <a href="http://gitee.xxxx.git或者git" target="_blank" rel="noopener">http://gitee.xxxx.git或者git</a> pull origin master就会让你输入密码，注意尽量一次性输正确，否则需要去win10 账户下修改(控制面板-&amp;gt;用户账户-&amp;gt;管理凭据-&amp;gt;寻找修改你的gitee密码)。</p><h5 id="5-拉取远程仓库"><a href="#5-拉取远程仓库" class="headerlink" title="5. 拉取远程仓库"></a><strong>5. 拉取远程仓库</strong></h5><pre><code>git pull origin master</code></pre><p>E:\workspace\go-xxxx&amp;gt;git pull origin master</p><p>From <a href="https://gitee.com/xxx/go-xxxx" target="_blank" rel="noopener">https://gitee.com/xxx/go-xxxx</a></p><p> * branch            master     -&amp;gt; FETCH_HEAD</p><p>如果这步有错请检查你的gitee密码是否正确。</p><h5 id="6-准备上传工作"><a href="#6-准备上传工作" class="headerlink" title="6. 准备上传工作"></a><strong>6. 准备上传工作</strong></h5><pre><code>git add .    git commit -m &amp;quot;first commit&amp;quot;    git push origin master</code></pre><p>E:\workspace\go-xxx&amp;gt;git push origin master</p><p>Enumerating objects: 83, done.</p><p>Counting objects: 100% (83/83), done.</p><p>Delta compression using up to 4 threads</p><p>Compressing objects: 100% (75/75), done.</p><p>Writing objects: 100% (82/82), 4.10 MiB | 1.73 MiB/s, done.</p><p>Total 82 (delta 6), reused 0 (delta 0)</p><p>remote: Powered by Gitee.com</p><p>出现上面则为上传成功。</p></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>亲测身份证可过谷歌云二验</title>
     <link href="undefined2019/11/17/two-gcp/"/>
     <url>2019/11/17/two-gcp/</url>
