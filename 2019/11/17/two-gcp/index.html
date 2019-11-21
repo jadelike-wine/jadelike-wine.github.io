@@ -184,11 +184,6 @@
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
   <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-    <script>
-      document.getElementById('visitors-text').innerText = '本文阅读数：';
-      document.getElementById('visitors-count').className = 'leancloud-visitors-count';
-    </script>
-  
   <script>
     var notify = 'false' == true ? true : false;
     var verify = 'false' == true ? true : false;
@@ -204,7 +199,7 @@
         avatar: "retro",
         meta: ['nick', 'mail', 'link'],
         pageSize: "10",
-        visitor: "true"
+        visitor: ""
       });
       oldLoad && oldLoad();
     };
