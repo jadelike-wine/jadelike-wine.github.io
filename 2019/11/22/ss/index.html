@@ -184,8 +184,7 @@
 <pre><code>    wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</code></pre><p><strong>备用脚本二（2018.11.21更新）</strong></p>
 <p><strong>如果上面的脚本暂时用不了，可以用下面的备用脚本，备用脚本没有单独做图文教程，自己摸索下就会了。备用脚本卸载命令：   ./shadowsocksR.sh uninstall</strong>    </p>
 <p><code>yum -y install wget</code>     </p>
-<p><code>wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</code>      </p>
-<p><code>chmod +x shadowsocksR.sh</code>  </p>
+<pre><code>    wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh    </code></pre><p><code>chmod +x shadowsocksR.sh</code>  </p>
 <p><code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code>  </p>
 <p>如果提示 wget: command not found 的错误，这是你的系统精简的太干净了，wget都没有安装，所以需要安装wget。CentOS系统安装wget命令:   </p>
 <pre><code>    yum install -y wget      </code></pre><p>Debian/Ubuntu系统安装wget命令:      </p>
