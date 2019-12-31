@@ -16,7 +16,7 @@
   <meta name="description" content="description">
   <meta name="author" content="jadelike">
   <meta name="keywords" content="">
-  <title>vs-code编译java中ClassNotFoundException问题 ~ jadelike&#39; blog</title>
+  <title>hdu选课脚本 ~ jadelike&#39; blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -93,7 +93,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/vs.jpg')no-repeat center center;
+         style="background: url('http://jadelike-wine.gitee.io/picture/images/img_10.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -105,7 +105,7 @@
 
             
               <br>
-              <p class="mt-3">星期二, 十月 29日 2019, 2:34 下午</p>
+              <p class="mt-3">星期二, 十二月 3日 2019, 1:57 下午</p>
             
           </div>
 
@@ -127,15 +127,61 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <div style="text-indent:2em">
+            <h1 id="HDU-选课"><a href="#HDU-选课" class="headerlink" title="HDU 选课"></a>HDU 选课</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这是一个适用于杭州电子科技大学选课系统的选课脚本。该脚本使用 Python 编写，目前支持通识选修课模块的选课功能，体育课和普通理论课的选课功能正在计划中。  </p>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><p>python 3 和git  </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我上传到了gitee，国内会快一点，原先是放在github上的，所以第一行也可以用<br><code>git clone https://github.com/Cyrus97/HDU.git</code><br>替代     </p>
+<pre><code>    git clone https://gitee.com/Jadelike-wine/HDU.git  
+    cd HDU   
+    pip install -r ./requirements.txt</code></pre><p>如下图：<br><img src="http://jadelike-wine.gitee.io/picture/images/hdu-1.png" alt=""> </p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>使用之前需要配置好项目下的 config.json 文件。</p>
+<p>下面是对该配置文件的详细说明。  </p>
+<pre><code>    {
+      &quot;username&quot;: &quot;学号&quot;,  // 数字杭电登录账号，即学号
+      &quot;password&quot;: &quot;密码&quot;,  // 数字杭电密码
+     // 把相关课程按照模板填入，课程名称和课程代码是必须要填的，其他的可以空着
+      &quot;courses&quot;: {
+&quot;通识选修课&quot;: [
+  {
+    &quot;课程名称&quot;: &quot;国学雅集&quot;,
+    &quot;课程性质&quot;: &quot;人文经典与人文修养&quot;,
+    &quot;课程归属&quot;: &quot;通识选修一般课&quot;,
+    &quot;课程代码&quot;: &quot;C1292016&quot;,
+    &quot;上课时间&quot;: &quot;&quot;
+  },
+  {
+    &quot;课程名称&quot;: &quot;文学与人生&quot;,
+    &quot;课程性质&quot;: &quot;人文经典与人文修养&quot;,
+    &quot;课程归属&quot;: &quot;通识选修一般课&quot;,
+    &quot;课程代码&quot;: &quot;C1292030&quot;,
+    &quot;上课时间&quot;: &quot;&quot;
+  }
+],
+&quot;普通理论课&quot;: [
+  {
+    &quot;课程名称&quot;: &quot;编译原理&quot;,
+    &quot;课程性质&quot;: &quot;专业必修&quot;,
+    &quot;课程代码&quot;: &quot;A0504020&quot;,
+    &quot;上课时间&quot;: &quot;&quot;,
+    &quot;教师名称&quot;: &quot;&quot;
+  }
+],
+&quot;体育课&quot;: [
+  {
+    &quot;课程名称&quot;: &quot;羽毛球&quot;,
+    &quot;课程代码&quot;: &quot;T1300020&quot;,
+    &quot;教师姓名&quot;: &quot;&quot;,
+    &quot;上课时间&quot;: &quot;&quot;
+  }
+]
+     },
+      // 选课成功会发送邮件，如果留空则不会发送
+      &quot;from_email&quot;: &quot;发送通知的邮箱&quot;,
+      &quot;from_email_psw&quot;: &quot;发送通知的邮箱的密码&quot;,
+      &quot;to_email&quot;: &quot;接收通知的邮箱&quot;,
+      &quot;delay&quot;: 5  // 选课频率，越小越快，无特殊要求不要更改
+    }   </code></pre><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p>安装完成，配置完文件就可以愉快的运行了。</p>
+<pre><code>    python ./run.py</code></pre><h2 id="转载"><a href="#转载" class="headerlink" title="转载"></a>转载</h2><p><a href="https://github.com/Cyrus97/HDU" target="_blank" rel="noopener">https://github.com/Cyrus97/HDU</a></p>
 
-<p></font><br/><br><img src="https://user-images.githubusercontent.com/46087189/67135696-e2536d80-f24e-11e9-8bca-3c504754d1bc.png" alt="问题">      </p>
-<p>编译java的时候，明明cmd中可以运行，但是vscode就是不行，环境也很正常，查遍了google还是找不到原因，干脆去github上问开发者了。        </p>
-<p>首先，将以下插件更新到最新版本：<br><img src="https://user-images.githubusercontent.com/46087189/67180634-bbdb3100-f40c-11e9-97ce-2b49b0220f41.png" alt="">      </p>
-<p>再F1 -&gt; Java: clean the Java language server workspace就可以了     </p>
-<p>动态图：<br><img src="https://user-images.githubusercontent.com/14052197/67253864-8ede5b00-f4ac-11e9-9828-6a84cf6b8a7e.gif" alt=""> </p>
-<p>开发者回复的链接：<a href="https://github.com/microsoft/vscode-java-debug/issues/692" target="_blank" rel="noopener">https://github.com/microsoft/vscode-java-debug/issues/692</a></p>
-</div>
             <hr>
           </div>
           <br>
@@ -144,7 +190,7 @@
               <p>
                 <i class="iconfont icon-inbox"></i>
                 
-                  <a class="hover-with-bg" href="/categories/%E5%B7%A5%E5%85%B7">工具</a>
+                  <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0">学习</a>
                   &nbsp;
                 
               </p>
@@ -152,7 +198,7 @@
             <p>
               <i class="iconfont icon-tag"></i>
               
-              <span id="/vs-code编译java中ClassNotFoundException问题/" class="visitors leancloud_visitors" data-flag-title="vs-code编译java中ClassNotFoundException问题">
+              <span id="/hdu/" class="visitors leancloud_visitors" data-flag-title="hdu选课脚本">
                 <em id="visitors-text" class="post-meta-item-text"></em>
                 <i id="visitors-count"></i>
               </span>
@@ -251,7 +297,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "vs-code编译java中ClassNotFoundException问题&nbsp;",
+        "hdu选课脚本&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 60,

@@ -16,7 +16,7 @@
   <meta name="description" content="description">
   <meta name="author" content="jadelike">
   <meta name="keywords" content="">
-  <title>vs-code编译java中ClassNotFoundException问题 ~ jadelike&#39; blog</title>
+  <title>杭电邮箱xss尝试后的想法 ~ jadelike&#39; blog</title>
 
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
@@ -93,7 +93,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/img/vs.jpg')no-repeat center center;
+         style="background: url('http://jadelike-wine.gitee.io/picture/images/img_11.jpg')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -105,7 +105,7 @@
 
             
               <br>
-              <p class="mt-3">星期二, 十月 29日 2019, 2:34 下午</p>
+              <p class="mt-3">星期二, 十二月 31日 2019, 8:17 晚上</p>
             
           </div>
 
@@ -127,15 +127,14 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <div style="text-indent:2em">
+            <h1 id="杭电邮箱xss尝试后的想法"><a href="#杭电邮箱xss尝试后的想法" class="headerlink" title="杭电邮箱xss尝试后的想法"></a>杭电邮箱xss尝试后的想法</h1><p>安稳地度过一个学期，正准备期末复习，没想到专业课的曾老师在最后一堂课下课时暗示了一下我们，她都是把期末试卷放在杭电邮箱的，有技术的同学试一试，我于是想起了之前学习web方向的xss   </p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>思路很简单，想登陆杭电邮箱，除了密码，那就是cookie了，获取cookie，就想到xss了。</p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>本来想把代码全部开源，后来网上查了一下有兄弟也干过类似的事，直接退学，怕了怕了，就介绍一下思路和参考文章的，看一看应该也会了</p>
+<p>用qq邮箱给我的hdu邮箱发了一封邮件，结果<br><img src="http://jadelike-wine.gitee.io/picture/images/hduxss.png" alt="">  </p>
+<p>呕吼，完蛋，难道是察觉出了异样？？<br>接着我换了一张图，用了杭电官网上的图，给hdu邮箱也顺带给我自己的qq邮箱发了一封，结果qq邮箱正常显示，hdu邮箱还是如上如所示，gg，看来杭电邮箱为了防止出事情，直接一刀切了所有不稳定因素。那没办法了，只能外链了。<br><img src="http://jadelike-wine.gitee.io/picture/images/hdutest.png" alt=""></p>
+<p>这样的确没有任何警告，但我相信也没有老师蠢到会直接点开，那没办法了，安心复习吧。</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p>《看上去很美 为什么JSONP跨域获取cookie登录老师邮箱不现实》<a href="https://undefinedblog.com/jsonp-cross-domain-get-cookie/" target="_blank" rel="noopener">https://undefinedblog.com/jsonp-cross-domain-get-cookie/</a><br>《如何通过入侵老师邮箱拿到期末考卷和修改成绩》<a href="https://my.oschina.net/u/588964/blog/98727" target="_blank" rel="noopener">https://my.oschina.net/u/588964/blog/98727</a><br>《利用xss漏洞窃取cookie登录》<a href="https://blog.csdn.net/qq1124794084/article/details/77507679" target="_blank" rel="noopener">https://blog.csdn.net/qq1124794084/article/details/77507679</a></p>
 
-<p></font><br/><br><img src="https://user-images.githubusercontent.com/46087189/67135696-e2536d80-f24e-11e9-8bca-3c504754d1bc.png" alt="问题">      </p>
-<p>编译java的时候，明明cmd中可以运行，但是vscode就是不行，环境也很正常，查遍了google还是找不到原因，干脆去github上问开发者了。        </p>
-<p>首先，将以下插件更新到最新版本：<br><img src="https://user-images.githubusercontent.com/46087189/67180634-bbdb3100-f40c-11e9-97ce-2b49b0220f41.png" alt="">      </p>
-<p>再F1 -&gt; Java: clean the Java language server workspace就可以了     </p>
-<p>动态图：<br><img src="https://user-images.githubusercontent.com/14052197/67253864-8ede5b00-f4ac-11e9-9828-6a84cf6b8a7e.gif" alt=""> </p>
-<p>开发者回复的链接：<a href="https://github.com/microsoft/vscode-java-debug/issues/692" target="_blank" rel="noopener">https://github.com/microsoft/vscode-java-debug/issues/692</a></p>
-</div>
             <hr>
           </div>
           <br>
@@ -144,7 +143,7 @@
               <p>
                 <i class="iconfont icon-inbox"></i>
                 
-                  <a class="hover-with-bg" href="/categories/%E5%B7%A5%E5%85%B7">工具</a>
+                  <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0">学习</a>
                   &nbsp;
                 
               </p>
@@ -152,7 +151,7 @@
             <p>
               <i class="iconfont icon-tag"></i>
               
-              <span id="/vs-code编译java中ClassNotFoundException问题/" class="visitors leancloud_visitors" data-flag-title="vs-code编译java中ClassNotFoundException问题">
+              <span id="/xss-hdu/" class="visitors leancloud_visitors" data-flag-title="杭电邮箱xss尝试后的想法">
                 <em id="visitors-text" class="post-meta-item-text"></em>
                 <i id="visitors-count"></i>
               </span>
@@ -251,7 +250,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "vs-code编译java中ClassNotFoundException问题&nbsp;",
+        "杭电邮箱xss尝试后的想法&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 60,
