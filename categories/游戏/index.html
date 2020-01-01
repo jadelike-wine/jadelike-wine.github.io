@@ -6,13 +6,13 @@
 
 
 <head>
-<meta name="google-site-verification" content="DieSqwYfEqotRqNILpS_5tAG6bzi-1955C2NgmVi-II" />
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
   <meta name="description" content="description">
   <meta name="author" content="jadelike">
   <meta name="keywords" content="">
@@ -22,17 +22,13 @@
 <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
 <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
 <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
-<link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
 
 
 <link rel="stylesheet" href="/css/main.css"  >
 
 
   <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
-
-
-  
-
 
 
 </head>
@@ -43,7 +39,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>jadelike&#39; blog</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>jadelike' blog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -57,10 +53,14 @@
         
           
           
+          
+          
           <li class="nav-item">
             <a class="nav-link" href="/">主页</a>
           </li>
         
+          
+          
           
           
           <li class="nav-item">
@@ -69,10 +69,14 @@
         
           
           
+          
+          
           <li class="nav-item">
             <a class="nav-link" href="/categories/">分类</a>
           </li>
         
+          
+          
           
           
           <li class="nav-item">
@@ -88,8 +92,6 @@
       </ul>
     </div>
   </div>
-
-
 </nav>
 
     <div class="view intro-2" id="background"
@@ -108,7 +110,7 @@
 
           
             <div class="scroll-down-bar">
-              <i class="fa fa-angle-down scroll-down-arrow"></i>
+              <i class="fas fa-angle-down scroll-down-arrow"></i>
             </div>
           
         </div>
@@ -127,7 +129,7 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
+<!--  <p class="h4">共计 2 篇文章</p>-->
   <hr>
   
     
@@ -146,6 +148,9 @@
     </a>
   
 </div>
+
+
+
               </div>
             </div>
           </div>
@@ -186,12 +191,34 @@
 
   <footer class="mt-5">
   <div class="text-center py-3">
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-<span class="post-meta-divider">|</span>
-<span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"</span>人</span>
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
     <br>
+
     
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
   </div>
 </footer>
 
@@ -202,6 +229,31 @@
 <script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
 <script src="/js/main.js" ></script>
 
+
+
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
 
 
 
@@ -260,14 +312,23 @@
 
   <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
   <script>
-    $('#post').find('img').each(
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
       function () {
-        var _this = $(this);
-        var _src = _this.attr("src");
-        _this.wrap('<a data-fancybox="images" href="' + _src + '" ></a>');
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
       }
     );
   </script>
+
+
+
+
+
+
+
+
 
 
 
