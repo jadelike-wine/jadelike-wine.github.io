@@ -200,8 +200,9 @@ while((data = fis.read())!=-1){
 
 fis.close();
 
-fos.close();</code></pre><p>}</p>
-<p>上面的方法虽然能达到目的，但是在实际使用的时候因为缺乏缓存，复制文件的时间过长导致卡顿，因此可以使用缓存区来加速，可以将代码修改为：</p>
+fos.close();
+
+}</code></pre><p>上面的方法虽然能达到目的，但是在实际使用的时候因为缺乏缓存，复制文件的时间过长导致卡顿，因此可以使用缓存区来加速，可以将代码修改为：</p>
 <pre><code>publicstaticvoidcopyFile(File src,File dst)throwsIOException{
 
 FileInputStream fis =newFileInputStream(src);
@@ -245,8 +246,9 @@ while((data = bis.read())!=-1){
 
 }
 
-bis.close();</code></pre><p>}</p>
-<p>ByteArrayOutputStream使用示例：</p>
+bis.close();
+
+}</code></pre><p>ByteArrayOutputStream使用示例：</p>
 <pre><code>publicstaticvoidmain(String[] args) throws IOException {
 
 ByteArrayOutputStream bos =newByteArrayOutputStream();
@@ -359,8 +361,9 @@ System.out.println(dis.readChar());
 
 System.out.println(dis.readDouble());
 
-dis.close();</code></pre><p>}</p>
-<h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><p>原本使用字节流已经满足了I/O的所有需求的，但是可惜的是计算机的编码格式太多，如中国的GBK，还有ASCII/Unicode等编码，不同的编码之间并不兼容，如GBK是一个汉字有两个字节，而ASCII/Unicode则是一个字母一个字节，如果用ANSI来解析GBK则会造成乱码。这时字符流Reader类和Writer类就派上用场了，要注意的是，字符流虽然读取的是char数组，但它们的底层还是依靠byte字节来读取的。<br>由于Reader和Writer是抽象类，因此要靠子类来实现它们的抽象方法</p>
+dis.close();
+
+}</code></pre><h2 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h2><p>原本使用字节流已经满足了I/O的所有需求的，但是可惜的是计算机的编码格式太多，如中国的GBK，还有ASCII/Unicode等编码，不同的编码之间并不兼容，如GBK是一个汉字有两个字节，而ASCII/Unicode则是一个字母一个字节，如果用ANSI来解析GBK则会造成乱码。这时字符流Reader类和Writer类就派上用场了，要注意的是，字符流虽然读取的是char数组，但它们的底层还是依靠byte字节来读取的。<br>由于Reader和Writer是抽象类，因此要靠子类来实现它们的抽象方法</p>
 <p><strong>Reader类的子类：</strong></p>
 <pre><code>BufferedReader,
 CharArrayReader,
